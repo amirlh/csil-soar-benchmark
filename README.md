@@ -1,7 +1,7 @@
 # CSIL and IL-SOAR — imitation learning benchmark
 
 EE-568 Reinforcement Learning project (Amir Lahlou, EPFL).
-Paper-faithful reimplementation of CSIL and IL-SOAR, benchmarked across expert-demonstration budgets on Gymnasium control tasks. This repository contains the CSIL + IL-SOAR portion of the joint course report.
+Reimplementation of CSIL and IL-SOAR following the original papers, benchmarked across expert-demonstration budgets on Gymnasium control tasks. This repository contains the CSIL + IL-SOAR portion of the joint course report.
 
 ## Contents
 
