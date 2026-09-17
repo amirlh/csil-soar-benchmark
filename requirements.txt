@@ -1,0 +1,8 @@
+numpy
+torch
+stable_baselines3
+gymnasium
+gymnasium[classic-control]
+tqdm
+rich
+pandas
