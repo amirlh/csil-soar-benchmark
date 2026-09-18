@@ -30,6 +30,15 @@ plots/
   acrobot_csilsoar_mean.png        — Fig. 1b in report
   acrobot_compare_q25cummax.png    — Fig. 2 in report
 
+media/
+  render_rollouts.py               — side-by-side rollout videos, expert vs CSIL+SOAR
+  cartpole_expert_vs_csil_soar.gif / .mp4
+  acrobot_expert_vs_csil_soar.gif / .mp4
+
+checkpoints/
+  csil_soar_CartPole-v1_K1_actor.pt   — actor trained from 1 expert demonstration (return 500/500)
+  csil_soar_Acrobot-v1_K50_actor.pt   — actor trained from 50 expert demonstrations (return about -66)
+
 data/
   benchmark_csil_Acrobot-v1.csv         — final (seed, K) Q25 snapshots, CSIL
   benchmark_csil_soar_Acrobot-v1.csv    — final (seed, K) Q25 snapshots, CSIL+SOAR
@@ -67,6 +76,17 @@ python3 benchmark_csil.py --env Acrobot-v1 --algo csil_soar \
 python3 plot_final.py --csv data/curves_6000eps_snapshot.csv --outdir plots/
 python3 plot_compare_algos.py --csv data/curves_6000eps_snapshot.csv \
     --out plots/acrobot_compare_q25cummax.png
+```
+
+## Rollout videos
+
+PPO expert on the left, CSIL+SOAR policy on the right, same evaluation seed:
+
+<img src="media/cartpole_expert_vs_csil_soar.gif" width="600" alt="CartPole: PPO expert vs CSIL+SOAR trained from one demonstration">
+<img src="media/acrobot_expert_vs_csil_soar.gif" width="600" alt="Acrobot: PPO expert vs CSIL+SOAR trained from 50 demonstrations">
+
+```bash
+python3 media/render_rollouts.py
 ```
 
 ## Rebuild the PDF
